@@ -1,0 +1,456 @@
+.main {
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        padding: 80px 0px;
+    }
+
+    &__firstp {
+        font-family: Inter;
+        font-size: 68px;
+        font-weight: 700;
+        line-height: 80px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #141414;
+
+    }
+
+    &__secondp {
+        //styleName: Text lg/Medium;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: center;
+        color: #141414;
+
+    }
+}
+
+.second {
+    &__secondpp {
+        font-family: Inter;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        text-align: left;
+
+
+    }
+
+    &__text {
+        padding: 60px 0px;
+    }
+
+    &__companies {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    &__card {
+        width: 176px;
+        height: 96px;
+        border-radius: 5px;
+        background: rgba(242, 244, 247, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__card:hover {
+        width: 180px;
+        height: 100px;
+        border: 1px solid black;
+    }
+}
+
+.third {
+    margin: 40px 0px;
+
+
+
+
+
+    &__p {
+        font-family: Inter;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: #262626;
+        padding: 60px 0px;
+    }
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__card {
+        width: 384px;
+        height: 140px;
+        padding: 60px 0px;
+        background: #F2F4F7;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 30px 20px;
+    }
+
+    &__card:hover {
+        width: 390px;
+        height: 146px;
+        border: 1px solid grey;
+    }
+
+    &__firstp {
+
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: left;
+
+    }
+
+    &__secondp {
+
+        font-family: Inter;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: -0.02em;
+        text-align: left;
+
+    }
+}
+
+.four {
+    margin: 90px 0px;
+
+    &__text {
+        padding: 60px 0px;
+    }
+
+    &__p {
+        font-family: Inter;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        text-align: left;
+
+    }
+
+    &__firstp {
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+        color: rgba(16, 24, 40, 1);
+
+    }
+
+    &__secondp {
+        //styleName: Text md/Regular;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(71, 84, 103, 1);
+
+    }
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+
+
+
+
+    &__card {
+        width: 384px;
+        height: 238px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background: rgba(242, 244, 247, 1);
+        gap: 20px;
+        border-radius: 5px;
+
+
+    }
+
+    &__card:hover {
+        width: 390px;
+        height: 245px;
+        border: 1px solid grey;
+
+    }
+}
+
+.five {
+    margin: 30px 0px;
+
+    &__p {
+        font-family: Inter;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: rgba(38, 38, 38, 1);
+        width: 450px;
+        padding: 40px 0px;
+    }
+
+}
+
+// Existing styles remain unchanged
+
+@media (max-width: 576px) {
+    .main {
+
+        &__text {
+            padding: 40px 0px; // Adjusted padding for smaller screens
+            gap: 14px; // Reduced gap for better spacing on mobile
+        }
+
+        &__firstp {
+            font-size: 36px; // Reduced font size for mobile
+            line-height: 44px;
+        }
+
+        &__secondp {
+            font-size: 14px; // Slightly smaller font size
+            line-height: 20px;
+        }
+    }
+
+    .second {
+        &__secondpp {
+            font-size: 24px; // Smaller heading for mobile
+            line-height: 32px;
+        }
+
+        &__text {
+            padding: 30px 0px; // Reduced padding for mobile
+        }
+
+        &__companies {
+            gap: 16px; // Reduced gap for better spacing on mobile
+        }
+
+        &__card {
+            width: 140px; // Smaller cards on mobile
+            height: 80px;
+        }
+
+        &__card:hover {
+            width: 144px;
+            height: 84px;
+        }
+    }
+
+    .third {
+        margin: 20px 0px; // Reduced margin on mobile
+
+        &__p {
+            font-size: 28px; // Smaller heading for mobile
+            line-height: 36px;
+        }
+
+        &__cards {
+            flex-direction: column; // Stack cards vertically on mobile
+            gap: 20px; // Add gap between stacked cards
+        }
+
+        &__card {
+            width: 100%; // Make cards full-width on mobile
+            height: auto; // Adjust height to content
+            padding: 20px; // Reduced padding for mobile
+        }
+
+        &__card:hover {
+            width: 100%; // Maintain full width on hover
+            height: auto;
+        }
+
+        &__firstp {
+            font-size: 16px; // Slightly smaller text on mobile
+        }
+
+        &__secondp {
+            font-size: 48px; // Reduced font size
+            line-height: 56px;
+        }
+    }
+
+    .four {
+        margin: 60px 0px; // Reduced margin on mobile
+
+        &__text {
+            padding: 30px 0px; // Adjusted padding for mobile
+        }
+
+        &__p {
+            font-size: 28px; // Smaller heading for mobile
+            line-height: 36px;
+        }
+
+        &__cards {
+            flex-direction: column; // Stack cards vertically on mobile
+            gap: 20px; // Add gap between stacked cards
+        }
+
+        &__card {
+            width: 100%; // Make cards full-width on mobile
+            height: auto;
+            padding: 20px; // Reduced padding for mobile
+        }
+
+        &__card:hover {
+            width: 100%; // Maintain full width on hover
+            height: auto;
+        }
+
+        &__firstp {
+            font-size: 18px; // Slightly smaller text on mobile
+        }
+
+        &__secondp {
+            font-size: 14px;
+        }
+    }
+
+    .five {
+        margin: 20px 0px;
+
+        &__p {
+            font-size: 28px;
+            line-height: 36px;
+            width: auto;
+            padding: 20px 0px;
+        }
+    }
+}
+
+.main {
+    &__img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; // space between large and small images
+        margin-top: 40px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        &__large-img {
+            width: 80%; // adjust the size of the large image
+        }
+
+        &__small-img {
+            width: 40%; // adjust the size of the small image
+        }
+    }
+}
+
+.five {
+    &__img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; // space between large and small images
+        margin-top: 40px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        &__large-img {
+            width: 80%; // adjust the size of the large image
+        }
+
+        &__small-img {
+            width: 40%; // adjust the size of the small image
+        }
+    }
+}
+
+.six {
+    margin: 90px 0px;
+
+    &__p {
+        font-family: Inter;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: rgba(38, 38, 38, 1);
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 32px;
+        margin: 60px 0px;
+
+    }
+
+    &__card {
+        width: 384px;
+        height: 288px;
+        background: rgba(242, 244, 247, 1);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    &__firstp {
+  
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        text-align: left;
+        color: rgba(16, 24, 40, 1);
+
+    }
+
+    &__secondp {
+   
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(71, 84, 103, 1);
+
+    }
+}

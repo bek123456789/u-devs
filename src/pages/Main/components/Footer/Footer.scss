@@ -1,0 +1,114 @@
+.footer {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+    }
+
+    &__div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 70px 0px;
+    }
+
+    &__stroke {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media (max-width:760px) {
+            width: 170px;
+        }
+    }
+
+    &__btn {
+        margin: auto;
+    }
+
+    &__callbtn {
+        width: 296px;
+        height: 74px;
+        background: rgba(20, 20, 20, 1);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: center;
+
+        border-radius: 8px;
+
+
+    }
+
+    &__firstp {
+        //styleName: Text sm/Semibold;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: left;
+        color: rgba(145, 145, 145, 1);
+
+    }
+
+    &__secondp {
+        //styleName: Text md/Medium;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(38, 38, 38, 1);
+
+    }
+
+    &__end {
+        margin: auto;
+    }
+
+    &__endp {
+        //styleName: Text md/Regular;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(145, 145, 145, 1);
+
+    }
+
+    @media (max-width:760px) {
+        &__div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        &__strokes {
+
+            display: block;
+
+        }
+    }
+
+    &__strokes {
+
+        display: none;
+
+        @media (max-width :760px) {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 170px;
+
+        }
+    }
+}

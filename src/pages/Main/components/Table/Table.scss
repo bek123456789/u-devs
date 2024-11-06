@@ -1,0 +1,124 @@
+.table-container {
+    // margin: 50px 0px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+
+    gap: 30px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+
+.heading {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgba(16, 24, 40, 1);
+
+}
+
+.categories {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+
+
+    &:hover {
+        background-color: #d0d0ff;
+    }
+
+    &.active {
+        background: rgba(57, 60, 227, 1);
+        color: #fff;
+    }
+}
+
+.stacks-grid {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 32px;
+}
+
+.stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 170px;
+    height: 120px;
+
+    border-radius: 5px;
+
+
+}
+
+.stack-image {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .table-container {
+        padding: 10px;
+        /* Reduce padding for mobile */
+    }
+
+    .heading {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    .categories {
+        gap: 6px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .category-button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .stacks-grid {
+        gap: 12px;
+    }
+
+    .stack-item {
+        width: 120px;
+        height: 90px;
+    }
+
+    .stack-image {
+        max-width: 30px;
+        max-height: 30px;
+    }
+}
