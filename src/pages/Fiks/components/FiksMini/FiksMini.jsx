@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import "./FiksMini.scss";
 
 const clients = [
-    { id: 1, src: "./src/assets/way.png", alt: "Way" },
-    { id: 2, src: "./src/assets/tbc.png", alt: "TBC" },
-    { id: 3, src: "./src/assets/iman.png", alt: "IMAN" },
-    { id: 4, src: "./src/assets/anor.png", alt: "ANORBANK" },
-    { id: 5, src: "./src/assets/bereke.png", alt: "Bereke Bank" },
-    { id: 6, src: "./src/assets/hyssa.png", alt: "Hyssa" },
-    { id: 7, src: "./src/assets/uzum nasiya.png", alt: "Uzum Nasiya" },
-    { id: 8, src: "./src/assets/genus.png", alt: "GENUS Technologies" },
-    { id: 9, src: "./src/assets/hamkor.png", alt: "HamkorBank" },
-    { id: 10, src: "./src/assets/soliq.png", alt: "Byakat" },
-    { id: 11, src: "./src/assets/qurilish.png", alt: "Bank" },
-    { id: 12, src: "./src/assets/yerelektron.png", alt: "Yerelektron" },
+    { id: 1, src: "/assets/way.png", alt: "Way" },
+    { id: 2, src: "/assets/tbc.png", alt: "TBC" },
+    { id: 3, src: "/assets/iman.png", alt: "IMAN" },
+    { id: 4, src: "/assets/anor.png", alt: "ANORBANK" },
+    { id: 5, src: "/assets/bereke.png", alt: "Bereke Bank" },
+    { id: 6, src: "/assets/hyssa.png", alt: "Hyssa" },
+    { id: 7, src: "/assets/uzum-nasiya.png", alt: "Uzum Nasiya" },
+    { id: 8, src: "/assets/genus.png", alt: "GENUS Technologies" },
+    { id: 9, src: "/assets/hamkor.png", alt: "HamkorBank" },
+    { id: 10, src: "/assets/soliq.png", alt: "Byakat" },
+    { id: 11, src: "/assets/qurilish.png", alt: "Bank" },
+    { id: 12, src: "/assets/yerelektron.png", alt: "Yerelektron" },
 ];
 
 const FiksMini = () => {
@@ -50,7 +50,7 @@ const FiksMini = () => {
                     <div className="fiks__cards">
                         <p className="fiks__simplename">Этапы разработки</p>
                         <div className="fiks__card">
-                            <img src="./src/assets/bigimg.svg" alt="Этапы разработки" />
+                            <img src="/assets/bigimg.svg" alt="Этапы разработки" />
                         </div>
                     </div>
 
@@ -72,19 +72,18 @@ const FiksMini = () => {
 
                             <div className="third__cards">
                                 <div className="third__cardss">
-                                    <img src="./src/assets/sss.svg" alt="" />
+                                    <img src="/assets/sss.svg" alt="" />
                                     <p className='sss_text'> Way ll Invest</p>
                                     <p className='third__pppp'>Mobile App • Frontend • Backend • UI/UX дизайн</p>
                                 </div>
                                 <div className="third__cardss">
-                                    <img src="./src/assets/cccc.png" alt="" />
+                                    <img src="/assets/cccc.png" alt="" />
                                     <p className='sss_text'>Hyssa</p>
                                     <p className='third__pppp'>Mobile App • Frontend • Backend • UI/UX дизайн • QA</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
 
                     <div className="faq">
                         <h2 className="faq__title">Часто задаваемые вопросы</h2>

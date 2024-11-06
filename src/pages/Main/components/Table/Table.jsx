@@ -2,36 +2,36 @@ import React, { useState } from 'react';
 import './Table.scss';
 
 const stacks = [
-    { name: 'Ffmpeg', category: 'Backend', image: './src/assets/ffmpeg.png' },
-    { name: 'GraphQL', category: 'Backend', image: './src/assets/GraphQL.png' },
-    { name: 'Nats', category: 'Backend', image: './src/assets/Nats.png' },
-    { name: 'Kafka', category: 'Backend', image: './src/assets/Apache Kafka.png' },
-    { name: 'RabbitMQ', category: 'Backend', image: './src/assets/RabbitMQ.png' },
-    { name: '.Net', category: 'Backend', image: './src/assets/net.png' },
-    { name: 'C#', category: 'Backend', image: './src/assets/c.png' },
-    { name: 'React JS', category: 'Frontend', image: './src/assets/file_type_reactts logo.png' },
-    { name: 'Vue JS', category: 'Frontend', image: './src/assets/Vue Js.png' },
-    { name: 'Airtable', category: 'PM', image: './src/assets/airtable.png' },
-    { name: 'Node JS', category: 'Backend', image: './src/assets/Node Js.png' },
-    { name: 'Next JS', category: 'Frontend', image: './src/assets/nextjs.png' },
-    { name: 'Nuxt JS', category: 'Frontend', image: './src/assets/nuxtjs.png' },
-    { name: 'Chakra UI', category: 'Frontend', image: './src/assets/chakra ui.png' },
-    { name: 'Tailwind', category: 'Frontend', image: './src/assets/tailwind.png' },
-    { name: 'Material UI', category: 'Frontend', image: './src/assets/NET_Core_Logo.svg 1.png' },
-    { name: 'Strapi', category: 'Backend', image: './src/assets/strapi.png' },
-    { name: 'Dart', category: 'Mobile', image: './src/assets/dart.png' },
-    { name: 'Flutter', category: 'Mobile', image: './src/assets/flutter.png' },
-    { name: 'Android', category: 'Mobile', image: './src/assets/android.png' },
-    { name: 'Swift', category: 'Mobile', image: './src/assets/swift.png' },
-    { name: 'Cypress', category: 'QA', image: './src/assets/cypress.png' },
-    { name: 'Jira', category: 'PM', image: './src/assets/NET_Core_Logo.svg 1 (1).png ' },
-    { name: 'Playwright', category: 'QA', image: './src/assets/playwright.png' },
-    { name: 'K6', category: 'QA', image: './src/assets/k6.png' },
-    { name: 'Cucumber', category: 'QA', image: './src/assets/cucumber.png' },
-    { name: 'Postman', category: 'QA', image: './src/assets/postman.png' },
-    { name: 'Figma', category: 'UX/UI', image: './src/assets/figma.png' },
-    { name: 'Framer', category: 'UX/UI', image: './src/assets/framer.png' },
-    { name: 'Kubernetes', category: 'DevOps', image: './src/assets/Kubernetes.png' }
+    { name: 'Ffmpeg', category: 'Backend', image: '/assets/ffmpeg.png' },
+    { name: 'GraphQL', category: 'Backend', image: '/assets/GraphQL.png' },
+    { name: 'Nats', category: 'Backend', image: '/assets/Nats.png' },
+    { name: 'Kafka', category: 'Backend', image: '/assets/Apache Kafka.png' },
+    { name: 'RabbitMQ', category: 'Backend', image: '/assets/RabbitMQ.png' },
+    { name: '.Net', category: 'Backend', image: '/assets/net.png' },
+    { name: 'C#', category: 'Backend', image: '/assets/c.png' },
+    { name: 'React JS', category: 'Frontend', image: '/assets/file_type_reactts logo.png' },
+    { name: 'Vue JS', category: 'Frontend', image: '/assets/Vue Js.png' },
+    { name: 'Airtable', category: 'PM', image: '/assets/airtable.png' },
+    { name: 'Node JS', category: 'Backend', image: '/assets/Node Js.png' },
+    { name: 'Next JS', category: 'Frontend', image: '/assets/nextjs.png' },
+    { name: 'Nuxt JS', category: 'Frontend', image: '/assets/nuxtjs.png' },
+    { name: 'Chakra UI', category: 'Frontend', image: '/assets/chakra ui.png' },
+    { name: 'Tailwind', category: 'Frontend', image: '/assets/tailwind.png' },
+    { name: 'Material UI', category: 'Frontend', image: '/assets/NET_Core_Logo.svg 1.png' },
+    { name: 'Strapi', category: 'Backend', image: '/assets/strapi.png' },
+    { name: 'Dart', category: 'Mobile', image: '/assets/dart.png' },
+    { name: 'Flutter', category: 'Mobile', image: '/assets/flutter.png' },
+    { name: 'Android', category: 'Mobile', image: '/assets/android.png' },
+    { name: 'Swift', category: 'Mobile', image: '/assets/swift.png' },
+    { name: 'Cypress', category: 'QA', image: '/assets/cypress.png' },
+    { name: 'Jira', category: 'PM', image: '/assets/NET_Core_Logo.svg 1 (1).png' },
+    { name: 'Playwright', category: 'QA', image: '/assets/playwright.png' },
+    { name: 'K6', category: 'QA', image: '/assets/k6.png' },
+    { name: 'Cucumber', category: 'QA', image: '/assets/cucumber.png' },
+    { name: 'Postman', category: 'QA', image: '/assets/postman.png' },
+    { name: 'Figma', category: 'UX/UI', image: '/assets/figma.png' },
+    { name: 'Framer', category: 'UX/UI', image: '/assets/framer.png' },
+    { name: 'Kubernetes', category: 'DevOps', image: '/assets/Kubernetes.png' }
 ];
 
 const categories = ['Все', 'Backend', 'Frontend', 'Mobile', 'QA', 'PM', 'UX/UI', 'DevOps', 'SecurityOps'];
@@ -76,11 +76,9 @@ const Table = () => {
                         ))}
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
-}
+};
 
 export default Table;
