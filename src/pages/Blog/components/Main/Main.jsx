@@ -39,7 +39,31 @@ const Main = () => {
                                 <p className='blog__smallword'>12 мин. читать </p>
                             </div>
                         </div>
+
                     </div>
+                    <div className="blog__news">
+                        <div className="blog__news_one">
+                            <div className="blog__news_one_left">
+                                <p className='blog__news_one_left_p'>3 Июнь, 2024</p>
+                            </div>
+                            <div className="blog__news_one_right">
+                                <p className='ui_ux'>UI/UX Дизайн</p>
+                                <p className='top_ten'>Топ-10 трендов в UI/UX Дизайне </p>
+                                <p className='framework_p'>Узнайте о значении фреймворков UX-дизайна для успеха проекта. Прочтите о ведущих примерах, которые помогут вам адаптировать то, что соответствует вашим потребностям.</p>
+                                <p className='ui_ux'> <img src="/assets/Icon.png" alt="" />12 мин. читать</p>
+                            </div>
+                        </div>
+                        <div className="blog_card">
+                            <p className='new_blogs'>New blogs</p>
+                            <p className='ux_solutions'>UX Solutions and UI concept</p>
+                            <p className='ux_solutions' >Design</p>
+                            <p className='ux_solutions'>Product</p>
+                            <p className='ux_solutions'>Software Development</p>
+                            <p className='ux_solutions'>Customer Success</p>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>

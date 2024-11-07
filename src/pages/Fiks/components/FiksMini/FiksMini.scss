@@ -1,194 +1,194 @@
-.fiks {
-    &__boldname {
-        font-family: Inter, sans-serif;
-        font-size: 68px;
-        font-weight: 700;
-        line-height: 80px;
-        text-align: center;
-        color: #141414;
-    }
+    .fiks {
+        &__boldname {
+            font-family: Inter, sans-serif;
+            font-size: 68px;
+            font-weight: 700;
+            line-height: 80px;
+            text-align: center;
+            color: #141414;
+        }
 
-    &__simpletext {
-        font-family: Inter, sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 28px;
-        text-align: center;
-        color: #141414;
-    }
-
-    &__name {
-        margin: 80px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-    }
-
-    &__simplename {
-        padding: 120px 0 40px;
-        font-family: Inter, sans-serif;
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 48px;
-        text-align: center;
-    }
-
-    .sec {
-        margin-top: 120px;
+        &__simpletext {
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 28px;
+            text-align: center;
+            color: #141414;
+        }
 
         &__name {
+            margin: 80px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        &__simplename {
+            padding: 120px 0 40px;
+            font-family: Inter, sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        .sec {
+            margin-top: 120px;
+
+            &__name {
+                font-family: Inter;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 48px;
+                letter-spacing: -0.02em;
+                text-align: left;
+                margin-bottom: 40px;
+            }
+
+            &__cards {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr); // 6 columns per row
+                grid-template-rows: repeat(2, auto); // 2 rows
+                gap: 20px;
+                justify-items: center;
+                align-items: center;
+            }
+
+            &__card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f5f5f5;
+                padding: 15px;
+                border-radius: 8px;
+                width: 100%;
+                height: 100px; // Adjust height as needed for the logo layout
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            &__card-image {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .third {
+
+        margin: 120px 0px;
+
+        &__pp {
             font-family: Inter;
             font-size: 40px;
             font-weight: 700;
             line-height: 48px;
             letter-spacing: -0.02em;
             text-align: left;
-            margin-bottom: 40px;
+
+        }
+
+        &__cardss {
+
+
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+
+        }
+
+        &__pppp {
+            //styleName: Text md/Medium;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            color: rgba(145, 145, 145, 1);
+
         }
 
         &__cards {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr); // 6 columns per row
-            grid-template-rows: repeat(2, auto); // 2 rows
-            gap: 20px;
-            justify-items: center;
-            align-items: center;
-        }
-
-        &__card {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 8px;
-            width: 100%;
-            height: 100px; // Adjust height as needed for the logo layout
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-
-            &:hover {
-                transform: scale(1.05);
-            }
-        }
-
-        &__card-image {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
+            gap: 30px;
+            margin: 50px 0px;
         }
     }
-}
 
-.third {
 
-    margin: 120px 0px;
 
-    &__pp {
+    .sss_text {
+        //styleName: Display xs/Semibold;
         font-family: Inter;
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 48px;
-        letter-spacing: -0.02em;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
         text-align: left;
+        color: rgba(0, 0, 0, 1);
 
     }
 
-    &__cardss {
 
 
-        border-radius: 5px;
+    .faq {
+        margin: 80px 0px;
+
+
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-
-    }
-
-    &__pppp {
-        //styleName: Text md/Medium;
-        font-family: Inter;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        text-align: left;
-        color: rgba(145, 145, 145, 1);
-
-    }
-
-    &__cards {
-        display: flex;
-        gap: 30px;
-        margin: 50px 0px;
-    }
-}
-
-
-
-.sss_text {
-    //styleName: Display xs/Semibold;
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
-    text-align: left;
-    color: rgba(0, 0, 0, 1);
-
-}
-
-
-
-.faq {
-    margin: 80px 0px;
-
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    &__title {
-        font-family: Inter, sans-serif;
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 48px;
-        text-align: center;
-        color: #141414;
-        margin-bottom: 40px;
-        width: 440px;
-    }
-
-    &__items {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    &__item {
-        border-bottom: 1px solid #e0e0e0;
-        padding: 10px 0;
-    }
-
-    &__question {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
-        font-family: Inter, sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 28px;
-        color: #141414;
-        cursor: pointer;
+        justify-content: center;
+        flex-direction: column;
 
-    }
+        &__title {
+            font-family: Inter, sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            text-align: center;
+            color: #141414;
+            margin-bottom: 40px;
+            width: 440px;
+        }
 
-    &__answer {
-        margin-top: 10px;
-        font-family: Inter, sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        color: rgba(145, 145, 145, 1);
+        &__items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 0;
+        }
+
+        &__question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #141414;
+            cursor: pointer;
+
+        }
+
+        &__answer {
+            margin-top: 10px;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: rgba(145, 145, 145, 1);
+        }
     }
-}

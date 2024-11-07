@@ -109,3 +109,111 @@
 
     }
 }
+
+
+
+
+.blog {
+    &__news {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__news_one {
+        display: flex;
+        gap: 60px;
+
+    }
+
+    &__news_one_left {
+        width: 120px;
+    }
+
+    &__news_one_left_p {
+
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(71, 84, 103, 1);
+
+    }
+
+    &__news_one_right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 488px;
+    }
+}
+
+.ui_ux {
+    //styleName: Text md/Regular;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(71, 84, 103, 1);
+
+}
+
+
+.top_ten {
+
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: left;
+    color: rgba(16, 24, 40, 1);
+
+}
+
+
+
+.framework_p {
+
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(71, 84, 103, 1);
+
+}
+
+
+.blog_card {
+    margin: 0px 50px;
+    width: 280px;
+    background: rgba(242, 244, 247, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+.new_blogs {
+    //styleName: Text lg/Bold;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: rgba(20, 20, 20, 1);
+}
+
+
+.ux_solutions {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(20, 20, 20, 1);
+
+    border-bottom: 1px solid rgba(20, 20, 20, 1);
+}

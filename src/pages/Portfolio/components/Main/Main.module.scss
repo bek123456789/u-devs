@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 50px 0px;
+    margin: 50px 0;
 }
 
 .category_button {
@@ -32,7 +32,7 @@
     }
 
     &__cards {
-        padding: 90px 0px;
+        padding: 90px 0;
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
@@ -45,19 +45,15 @@
         line-height: 32px;
         text-align: left !important;
         color: rgba(0, 0, 0, 1);
-
-
     }
 
     &__secondp {
-        //styleName: Text md/Medium;
         font-family: Inter;
         font-size: 16px !important;
         font-weight: 500;
         line-height: 24px;
         text-align: left !important;
         color: rgba(145, 145, 145, 1) !important;
-
     }
 
     @media (max-width: 768px) {
@@ -67,8 +63,7 @@
         }
 
         &__categories {
-            flex-direction: column;
-            gap: 10px;
+            display: none; // Hidden on smaller tablets or mobile screens
         }
 
         &__cards {
@@ -81,7 +76,6 @@
         }
     }
 
-    // Styles for mobile devices
     @media (max-width: 480px) {
         &__name {
             font-size: 24px;
@@ -89,16 +83,7 @@
         }
 
         &__categories {
-            display: none; // Hide categories initially on mobile
-        }
-
-        &__category_button {
-            width: 100%;
-            text-align: center;
-        }
-
-        &__cards {
-            padding: 15px 0;
+            display: none;
         }
 
         &__card {
@@ -106,6 +91,7 @@
 
             img {
                 width: 100%;
+                height: auto; // maintain aspect ratio
             }
 
             &__description {

@@ -41,7 +41,7 @@ const PortfolioChildd = () => {
                         <p>
                             Один из способов не отставать от этих принципов — принять заранее определенные стратегии, которые помогут структурировать общий процесс проектирования...
                         </p>
-                        <img src="/assets/Content item.svg" alt="Content Item" />
+                        <img className='imggg' src="/assets/Content item.svg" alt="Content Item" />
                         <p>
                             Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae...
                         </p>

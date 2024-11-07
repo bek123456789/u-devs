@@ -4,38 +4,27 @@
   .client__wrapper {
     text-align: center;
 
-
-
-
-
-
     .client__title-main {
       font-family: Inter;
       font-size: 40px;
       font-weight: 700;
       line-height: 44px;
       letter-spacing: -0.02em;
-
-
     }
 
     .client__title-sub {
-
       font-family: Inter;
       font-size: 18px;
       font-weight: 500;
       line-height: 28px;
       text-align: center;
-
     }
-
 
     .client__category {
       display: flex;
-
+      flex-wrap: wrap;
       margin-top: 20px;
       margin-bottom: 30px;
-      flex-wrap: wrap;
 
       .client__category-btn {
         background-color: #f1f1f1;
@@ -46,34 +35,26 @@
         font-size: 14px;
         border-radius: 5px;
         transition: background-color 0.3s ease;
-
         font-family: Inter;
-        font-size: 14px;
         font-weight: 600;
-        line-height: 20px;
 
         &:hover {
           background: rgba(57, 60, 227, 1);
           color: white;
-
         }
 
         &.active {
           background: rgba(57, 60, 227, 1);
           color: white;
           width: 120px;
-
         }
       }
     }
 
-
     .client__logos {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      /* 6 columns */
       gap: 30px;
-      /* Adjust gap between items */
 
       .client__logo-item {
         display: flex;
@@ -89,6 +70,50 @@
         }
       }
     }
+  }
 
+  // Mobile Styles
+  @media (max-width: 768px) {
+    padding: 20px;
+
+    .client__wrapper {
+      .client__title-main {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 20px;
+      }
+
+      .client__title-sub {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 15px;
+      }
+
+      .client__category {
+        gap: 10px;
+
+        .client__category-btn {
+          font-size: 10px; // Smaller font size
+          padding: 6px 12px; // Reduced padding
+          margin: 4px 0; // Smaller margin
+          width: 100px;
+          // max-width: 160px; // Adjusted width for compact appearance
+        }
+      }
+
+      .client__logos {
+        grid-template-columns: repeat(2, 1fr); // Adjusted to 2 columns on mobile
+        gap: 15px;
+
+        .client__logo-item {
+          width: 100px;
+          height: 60px;
+
+          .client__logo-img {
+            width: 80px;
+          }
+        }
+      }
+    }
   }
 }

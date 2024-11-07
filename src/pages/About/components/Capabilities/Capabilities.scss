@@ -1,5 +1,4 @@
 .capabilities {
-
     max-width: 800px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
@@ -54,6 +53,39 @@
             font-size: 16px;
             line-height: 1.5;
             padding: 10px 0;
+        }
+    }
+
+    // Mobile styles
+    @media (max-width: 768px) {
+        max-width: 100%;
+        padding: 0 20px;
+
+        h2 {
+            font-size: 28px;
+            margin: 30px 0;
+        }
+
+        &__all {
+            margin: 20px 0;
+        }
+
+        .capabilities__item {
+            margin-bottom: 15px;
+
+            .capabilities__header {
+                font-size: 16px;
+                padding: 15px 0;
+
+                .icon {
+                    font-size: 18px;
+                }
+            }
+
+            .capabilities__content {
+                font-size: 14px;
+                padding: 10px 0;
+            }
         }
     }
 }
