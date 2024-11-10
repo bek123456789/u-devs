@@ -1,0 +1,278 @@
+.blog_inner {
+    margin: 50px 0px;
+
+    &__how {
+        //styleName: Text md/Medium;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(145, 145, 145, 1);
+
+
+        span {
+            color: rgba(71, 84, 103, 1);
+
+        }
+    }
+
+
+
+
+    &__top_ten {
+        display: flex;
+        margin: 80px 0px;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    &__first {
+        display: flex;
+        flex-direction: column;
+        width: 690px;
+        gap: 20px;
+
+    }
+
+
+
+    &__first_child_first {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__first_child_second {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__second {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 280px;
+        background: rgba(242, 244, 247, 1);
+        height: 340px;
+        justify-content: center;
+        align-items: left;
+        padding: 0px 30px;
+        border-radius: 20px;
+    }
+}
+
+
+.ui__uix {
+    //styleName: Text md/Regular;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(71, 84, 103, 1);
+
+}
+
+.topten_p {
+    font-family: Inter;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(16, 24, 40, 1);
+
+}
+
+.do_this {
+    //styleName: Text md/Regular;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(71, 84, 103, 1);
+
+}
+
+.write_p {
+    //styleName: Text sm/Medium;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(145, 145, 145, 1);
+
+
+    span {
+        //styleName: Text sm/Semibold;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(57, 60, 227, 1);
+
+    }
+}
+
+
+.three_one_p {
+    //styleName: Text md/Regular;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(71, 84, 103, 1);
+
+}
+
+.osnova_p {
+    //styleName: Display sm/Bold;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: rgba(20, 20, 20, 1);
+
+}
+
+
+.doska_p {
+    //styleName: Text lg/Bold;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(20, 20, 20, 1);
+
+}
+
+.five_one {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+
+.imggss {
+    width: 696px;
+    height: 480px;
+
+    border-radius: 12px;
+
+
+}
+
+.another_text {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-left: 3px solid rgba(105, 65, 198, 1);
+
+}
+
+
+
+
+.kavicka_p {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    //styleName: Text xl/Medium italic;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(16, 24, 40, 1);
+
+}
+
+.minuss_p {
+    color: rgba(71, 84, 103, 1);
+    //styleName: Text md/Regular;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.conclusion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(242, 244, 247, 1);
+    width: 696px;
+    height: 494px;
+    justify-content: center;
+    align-items: left;
+    padding: 0px 32px;
+    border-radius: 10px;
+}
+
+.conclusion_p {
+    //styleName: Display sm/Bold;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(20, 20, 20, 1);
+
+
+
+}
+
+.conclusion_three_p {
+    //styleName: Text lg/Regular;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(71, 84, 103, 1);
+
+}

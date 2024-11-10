@@ -3,25 +3,24 @@ import './Contacts.scss';
 
 const ClientForm = () => {
     const [formData, setFormData] = useState({
-        name: '',
+        fullName: '',
         phone: '',
         email: ''
     });
-    const [statusMessage, setStatusMessage] = useState(''); // For success/error messages
-    const [isLoading, setIsLoading] = useState(false); // For the loading state
+    const [statusMessage, setStatusMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const validateForm = () => {
-        const { name, phone, email } = formData;
+        const { fullName, phone, email } = formData;
 
-        // Basic validation: ensure all fields are filled and email is valid
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const phonePattern = /^\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}$/; // Adjust pattern for phone if needed
+        const phonePattern = /^\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}$/;
 
-        if (!name || !phone || !email) {
+        if (!fullName || !phone || !email) {
             return "Please fill in all fields.";
         }
         if (!emailPattern.test(email)) {
@@ -39,21 +38,21 @@ const ClientForm = () => {
         // Validate form data before submitting
         const validationError = validateForm();
         if (validationError) {
-            setStatusMessage(validationError); // Show validation error
+            setStatusMessage(validationError);
             return;
         }
 
-        setIsLoading(true); // Start loading
+        setIsLoading(true);
 
-        // Prepare the payload to send to Google Apps Script
+        // Prepare the payload to send to the local API (json-server)
         const payload = {
-            name: formData.name,
+            fullName: formData.fullName,
             phone: formData.phone,
             email: formData.email,
         };
 
         try {
-            const response = await fetch('https://script.google.com/macros/s/AKfycbxIvCqocumBrMt6_bOVP3hYL5XuYqLmow1uDWlcHPx5-Z-6KpkH_4WPGt7cqsV6P_yi/exec', {
+            const response = await fetch('http://localhost:5000/clients', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -67,13 +66,13 @@ const ClientForm = () => {
             }
 
             const result = await response.json();
-            console.log('Response from Google Sheets:', result);
+            console.log('Response from db.json:', result);
 
             // Show success message
             setStatusMessage('Form submitted successfully!');
 
             // Clear the form
-            setFormData({ name: '', phone: '', email: '' });
+            setFormData({ fullName: '', phone: '', email: '' });
         } catch (error) {
             console.error('Error sending data:', error.message);
             setStatusMessage('Error submitting the form. Please try again.');
@@ -91,13 +90,13 @@ const ClientForm = () => {
             </p>
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
-                    <label htmlFor="name">Имя</label>
+                    <label htmlFor="fullName">Имя</label>
                     <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="fullName"
+                        name="fullName"
                         placeholder="Введите имя"
-                        value={formData.name}
+                        value={formData.fullName}
                         onChange={handleChange}
                         required
                     />
@@ -109,7 +108,7 @@ const ClientForm = () => {
                         id="phone"
                         name="phone"
                         placeholder="+998 (55) 000-00-00"
-                        pattern="\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}" // HTML pattern for the input field
+                        pattern="\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}"
                         title="Please enter a valid phone number in the format +998 (55) 000-00-00"
                         value={formData.phone}
                         onChange={handleChange}
@@ -130,7 +129,7 @@ const ClientForm = () => {
                     />
                 </div>
 
-                <button type="submit" disabled={isLoading || !formData.name || !formData.phone || !formData.email}>
+                <button type="submit" disabled={isLoading || !formData.fullName || !formData.phone || !formData.email}>
                     {isLoading ? 'Submitting...' : 'Отправить'}
                 </button>
             </form>

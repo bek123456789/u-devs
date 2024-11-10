@@ -1,0 +1,171 @@
+.vacancy_addres {
+    //styleName: Text md/Medium;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(145, 145, 145, 1);
+
+    margin: 30px 0px;
+
+    span {
+        //styleName: Text md/Medium;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(71, 84, 103, 1);
+
+    }
+}
+
+.vacancy_desc {
+    margin: 40px 0px;
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    width: 800px;
+    margin: 40px 250px;
+    gap: 20px;
+}
+
+.same_p {
+    font-family: Open Sans;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(16, 24, 40, 1);
+}
+
+.kakie {
+    //styleName: Text md/Medium;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(16, 24, 40, 1);
+
+}
+
+.loremm_p {
+    //styleName: Text md/Regular;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(71, 84, 103, 1);
+
+}
+
+.application_form {
+    margin: 90px 0px;
+    text-align: center;
+
+    h2 {
+        font-family: 'Inter';
+        font-size: 24px;
+        font-weight: 700;
+        color: rgba(16, 24, 40, 1);
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-family: 'Inter';
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(71, 84, 103, 1);
+        margin-bottom: 20px;
+    }
+
+    .form_content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 400px;
+        margin: 50px auto;
+
+
+        label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-family: 'Inter';
+            font-size: 14px;
+            color: rgba(71, 84, 103, 1);
+
+            input[type="text"],
+            input[type="tel"] {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid rgba(145, 145, 145, 1);
+                border-radius: 5px;
+                margin-top: 5px;
+            }
+        }
+
+        .phone_input {
+            display: flex;
+            gap: 10px;
+
+            select {
+                padding: 10px;
+                border: 1px solid rgba(145, 145, 145, 1);
+                border-radius: 5px;
+            }
+
+            input {
+                flex: 1;
+            }
+        }
+
+        .file_upload {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 2px dashed rgba(145, 145, 145, 1);
+            border-radius: 5px;
+            padding: 20px;
+            cursor: pointer;
+
+            input[type="file"] {
+                display: none;
+            }
+
+            span {
+                font-size: 14px;
+                color: rgba(71, 84, 103, 1);
+                margin-top: 5px;
+            }
+        }
+
+        button {
+            background-color: rgba(128, 128, 128, 1);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+    }
+}

@@ -40,7 +40,7 @@ const Header = () => {
 
                             <Link to={'/about'} className="header__link">О нас</Link>
                             <Link className="header__link">Новости</Link>
-                            <Link className="header__link">Вакансии</Link>
+                            <Link to={'/vacancy'} className="header__link">Вакансии</Link>
                         </div>
                         <div className="header__btndiv">
                             <Link to={'/contact'}>
@@ -73,7 +73,7 @@ const Header = () => {
 
                     <Link to={'/about'} className="header__link" onClick={toggleMenu}>О нас</Link>
                     <Link className="header__link" onClick={toggleMenu}>Новости</Link>
-                    <Link className="header__link" onClick={toggleMenu}>Вакансии</Link>
+                    <Link to={'/vacancy'} className="header__link" onClick={toggleMenu}>Вакансии</Link>
                 </div>
 
                 <Link to={'/contact'} onClick={toggleMenu}>

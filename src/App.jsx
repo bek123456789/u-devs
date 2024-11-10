@@ -7,6 +7,9 @@ import Contact from './pages/Contact/Contact';
 import Blog from './pages/Blog/Blog';
 import PortfolioChild from './pages/Portfolio/Child/PortfolioChild';
 import FiksPage from './pages/Fiks/FiksPage';
+import BlogInner from './pages/Blog/Child/BlogInner/BlogInner';
+import Vacancy from './pages/Vacancy/Vacancy';
+import VacancyInner from './pages/Vacancy/VacancyInner/VacancyInner';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
       <Route path='/contact' element={<Contact />} />
       <Route path='/blog' element={<Blog />} />
       <Route path='/fiks' element={<FiksPage />} />
+      <Route path='/blog_inner' element={<BlogInner />} />
+      <Route path='/vacancy' element={<Vacancy />} />
+      <Route path='/vacancy_inner' element={<VacancyInner />} />
     </Routes>
 
   );

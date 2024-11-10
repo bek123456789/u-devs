@@ -1,4 +1,6 @@
 .blog {
+    margin: 50px;
+
     &__title {
         margin: 80px 220px;
         font-family: "Inter", sans-serif;
@@ -117,12 +119,17 @@
     &__news {
         display: flex;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
+        flex-direction: column;
+        position: relative;
+
     }
 
     &__news_one {
         display: flex;
         gap: 60px;
+
+        margin: 30px 0px;
 
     }
 
@@ -195,6 +202,13 @@
     align-items: start;
     justify-content: center;
     padding: 20px 20px;
+    border-radius: 15px;
+
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
 }
 
 .new_blogs {

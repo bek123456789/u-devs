@@ -1,16 +1,16 @@
 import React from 'react'
 import Header from '../Main/components/Header/Header'
-import Main from './components/Main/Main'
+import VacancyComp from './VacancyComp/VacancyComp'
 import Footer from '../Main/components/Footer/Footer'
 
-const Blog = () => {
+const Vacancy = () => {
     return (
         <>
             <Header />
-            <Main />
+            <VacancyComp />
             <Footer />
         </>
     )
 }
 
-export default Blog
+export default Vacancy
