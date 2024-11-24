@@ -1,67 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
-import s from "./Main.module.scss";
-
-const categories = [
-    'Популярные',
-    'Финанс',
-    'Стартап',
-    'Электронная коммерция',
-    'Гос. проекты',
-    'Логистика',
-    'Медиа',
-    'Путешествия',
-    'Учебная платформа',
-    'Вебсайт',
-];
-
-const cardData = [
-    {
-        title: 'Way ll Invest',
-        category: 'Финанс',
-        description: 'Mobile App • Frontend • Backend • UI/UX дизайн',
-        image: '/assets/ways.png',
-    },
-    {
-        title: 'IMAN Invest Company',
-        category: 'Финанс',
-        description: 'Mobile App • Frontend • Backend • UI/UX дизайн • QA',
-        image: '/assets/imans.png',
-    },
-    {
-        title: 'Hyssa',
-        category: 'Стартап',
-        description: 'Mobile App • Frontend • Backend • UI/UX дизайн • QA',
-        image: '/assets/hysa.png',
-    },
-    {
-        title: 'Ташкентский университет',
-        category: 'Учебная платформа',
-        description: 'Frontend • Backend • UI/UX дизайн',
-        image: '/assets/univer.png',
-    },
-    {
-        title: 'Space Coworking',
-        category: 'Электронная коммерция',
-        description: 'Frontend • Backend • UI/UX дизайн',
-        image: '/assets/space.png',
-    },
-    {
-        title: 'TBC Bank',
-        category: 'Финанс',
-        description: 'Mobile App • Frontend • Backend • UI/UX дизайн • QA',
-        image: '/assets/tbcs.png',
-    },
-    {
-        title: 'Qwatt',
-        category: 'Электронная коммерция',
-        description: 'Mobile App • Backend • QA',
-        image: '/assets/q.watt.png',
-    },
-];
+import s from './Main.module.scss';
 
 const Main = () => {
+    const [categories, setCategories] = useState([]);
+    const [cardData, setCardData] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('Популярные');
+
+    // Fetch data from the server using axios
+    useEffect(() => {
+        // Fetch categories data
+        axios.get('http://localhost:5000/categories')
+            .then((response) => {
+                console.log(response.data); // Log the response to see the structure of the data
+                setCategories(response.data); // Set categories data
+            })
+            .catch((error) => {
+                console.error('Error fetching categories:', error);
+            });
+
+        // Fetch card data
+        axios.get('http://localhost:5000/cardData')
+            .then((response) => {
+                console.log(response.data); // Log the response to see the structure of the data
+                setCardData(response.data); // Set card data
+            })
+            .catch((error) => {
+                console.error('Error fetching card data:', error);
+            });
+    }, []); // Empty dependency array ensures the effect runs only once when the component mounts
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);

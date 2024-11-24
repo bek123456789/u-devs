@@ -9,7 +9,7 @@ const VacancyInner = () => {
     fullName: '',
     telegram: '',
     phone: '',
-    resume: null,
+    resume: null, // resume is kept for form control but will not be sent to json-server
   });
 
   // Handle input changes
@@ -25,20 +25,22 @@ const VacancyInner = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Create a new FormData object to handle the file upload
-    const data = new FormData();
-    data.append('fullName', formData.fullName);
-    data.append('telegram', formData.telegram);
-    data.append('phone', formData.phone);
-    if (formData.resume) {
-      data.append('resume', formData.resume);
-    }
+    // Prepare JSON data (excluding file uploads)
+    const data = {
+      fullName: formData.fullName,
+      telegram: formData.telegram,
+      phone: formData.phone,
+      // resume file will not be included here as json-server doesn't handle file uploads in this way
+    };
 
     try {
-      // Post request to json-server or your backend
+      // Post request to json-server
       const response = await fetch('http://localhost:5000/applications', {
         method: 'POST',
-        body: data,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       });
 
       if (response.ok) {

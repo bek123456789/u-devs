@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Capabilities.scss';
 
 const Capabilities = () => {
     const [activeIndex, setActiveIndex] = useState(null);
+    const [capabilities, setCapabilities] = useState([]);
+
+    useEffect(() => {
+
+        fetch('http://localhost:5000/capabilities')
+            .then((response) => response.json())
+            .then((data) => setCapabilities(data))
+            .catch((error) => console.log('Error fetching Capabilities', error));
+    }, []);
 
     const handleToggle = (index) => {
         setActiveIndex(index === activeIndex ? null : index);
@@ -14,55 +23,24 @@ const Capabilities = () => {
                 <div className="capabilities__wrapper">
                     <div className="capabilities__all">
                         <h2>Возможности</h2>
-                        <div className="capabilities__item">
-                            <div className="capabilities__header" onClick={() => handleToggle(0)}>
-                                Какие решения по разработке программного обеспечения вы предлагаете?
-                                <span className={`icon ${activeIndex === 0 ? 'expanded' : ''}`}>?</span>
-                            </div>
-                            {activeIndex === 0 && (
-                                <div className="capabilities__content">
-                                    Мы предлагаем разработку программного обеспечения на заказ, включая веб- и мобильные приложения, а также специализированные корпоративные системы, которые полностью соответствуют требованиям вашего бизнеса.
+                        {capabilities.map((item, index) => (
+                            <div className="capabilities__item" key={index}>
+                                <div className="capabilities__header" onClick={() => handleToggle(index)}>
+                                    {item.question}
+                                    <span className={`icon ${activeIndex === index ? 'expanded' : ''}`}>
+                                        {activeIndex === index ? '-' : '+'}
+                                    </span>
                                 </div>
-                            )}
-                        </div>
-
-                        <div className="capabilities__item">
-                            <div className="capabilities__header" onClick={() => handleToggle(1)}>
-                                Можете ли вы помочь с интеграцией облачных сервисов?
-                                <span className={`icon ${activeIndex === 1 ? 'expanded' : ''}`}>+</span>
+                                {activeIndex === index && (
+                                    <div className="capabilities__content">
+                                        {item.answer || 'Дополнительная информация будет добавлена позже.'}
+                                    </div>
+                                )}
                             </div>
-                            {activeIndex === 1 && <div className="capabilities__content"></div>}
-                        </div>
-
-                        <div className="capabilities__item">
-                            <div className="capabilities__header" onClick={() => handleToggle(2)}>
-                                Как вы обеспечиваете безопасность данных?
-                                <span className={`icon ${activeIndex === 2 ? 'expanded' : ''}`}>+</span>
-                            </div>
-                            {activeIndex === 2 && <div className="capabilities__content"></div>}
-                        </div>
-
-                        <div className="capabilities__item">
-                            <div className="capabilities__header" onClick={() => handleToggle(3)}>
-                                Какие у вас есть решения для автоматизации бизнес-процессов?
-                                <span className={`icon ${activeIndex === 3 ? 'expanded' : ''}`}>+</span>
-                            </div>
-                            {activeIndex === 3 && <div className="capabilities__content"></div>}
-                        </div>
-
-                        <div className="capabilities__item">
-                            <div className="capabilities__header" onClick={() => handleToggle(4)}>
-                                Какие аналитические решения вы предлагаете?
-                                <span className={`icon ${activeIndex === 4 ? 'expanded' : ''}`}>+</span>
-                            </div>
-                            {activeIndex === 4 && <div className="capabilities__content"></div>}
-                        </div>
+                        ))}
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     );
 };
